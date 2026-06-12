@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Vision</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Enerlytics</h1>
+
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#beneficios">Benefícios</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Sistema de Análise de Energia para Empresas</h2>
+
+            <p>
+                Monitore consumo, reduza custos e tome decisões inteligentes
+                com análise de energia em tempo real.
+            </p>
+
+            <button>Saiba Mais</button>
+        </div>
+        
+    </section>
+
+    <section class="upload-section">
+
+    <h2>📄 Análise da Conta de Energia</h2>
+
+    <div class="upload-card">
+
+        <p>
+            Faça o upload da sua fatura de energia em PDF para gerar relatórios,
+            identificar desperdícios e verificar possíveis cobranças por energia reativa.
+        </p>
+
+        <input type="file" id="arquivoConta" accept=".pdf">
+
+        <button onclick="analisarConta()">
+            Analisar Conta
+        </button>
+
+        <p id="arquivoSelecionado"></p>
+
+    </div>
+
+</section>
+
+    <section class="indicadores">
+            <h2 class="titulo-dashboard">Dashboard Energético</h2>
+
+    <!-- KPIs -->
+    <div class="kpis">
+
+        <div class="card-indicador">
+            <h3>⚡ Eficiência Energética</h3>
+            <p>60,00%</p>
+            <span>Desempenho atual</span>
+        </div>
+
+        <div class="card-indicador">
+            <h3>📊 Fator de Potência</h3>
+            <p>0,83</p>
+            <span>Meta recomendada: 0,92</span>
+        </div>
+
+        <div class="card-indicador">
+            <h3>⚠️ Desperdício</h3>
+            <p>40,00%</p>
+            <span>Consumo passível de otimização</span>
+        </div>
+
+    </div>
+
+    <!-- Análises -->
+    <div class="analises">
+
+        <div class="card-analise alerta">
+            <h3>🚨 Status</h3>
+            <p>
+                Possivel consumo reativo elevado identificado.
+                Existe risco de cobrança adicional por baixo fator de potência.
+            </p>
+        </div>
+
+        <div class="card-analise recomendacao">
+            <h3>💡 Recomendação</h3>
+            <p>
+                Realizar correção do fator de potência através de banco de capacitores
+                e monitoramento contínuo do consumo energético.
+            </p>
+        </div>
+
+        <div class="grafico">
+
+                <h3>Disptribuição de Energia</h3>
+                <p class="descricao">
+                    Energia Ativa e Reativa
+                </p>
+                <canvas id="graficoDistribuicao"></canvas>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+        <div class="graficos-grid">
+
+            <div class="grafico">
+
+                <h3>Histórico Anual</h3>
+
+                <p class="descricao">
+                    Evolução do consumo energético anual
+                </p>
+
+                <canvas id="graficoAnual"></canvas>
+
+            </div>
+
+            <div class="grafico">
+
+                <h3>Eficiência e Desperdício durante os meses</h3>
+
+                <canvas id="graficoEnergia"></canvas>
+
+            </div>
+
+            <div class="grafico">
+
+                <h3>Energia Ativa x Reativa</h3>
+                <p class="descricao">Comparação de meses</p>
+
+                <canvas id="graficoAtivaReativa"></canvas>
+
+            </div>
+
+            <div class="grafico">
+                <h3>Fator de Potência</h3>
+                <p class="descricao">Evolução mensal do fator de potência</p>
+                <canvas id="graficoFatorPotencia"></canvas>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <h2>Sobre o Projeto</h2>
+
+        <p>
+            O projeto tem como objetivo ajudar empresas a monitorar,
+            analisar e otimizar o consumo energético através de gráficos,
+            relatórios e indicadores inteligentes.
+        </p>
+    </section>
+
+    <section id="beneficios" class="beneficios">
+        <h2>Benefícios</h2>
+
+        <div class="beneficios-grid">
+            <div class="beneficio-card">
+                <h3>Redução de Custos</h3>
+                <p>Identifique desperdícios energéticos.</p>
+            </div>
+
+            <div class="beneficio-card">
+                <h3>Monitoramento Inteligente</h3>
+                <p>Acompanhe dados em tempo real.</p>
+            </div>
+
+            <div class="beneficio-card">
+                <h3>Sustentabilidade</h3>
+                <p>Ajude empresas a reduzir impactos ambientais.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contato" class="contato">
+        <h2>Contato</h2>
+
+        <p>Email: contato@energyvision.com</p>
+        <p>GitHub: github.com/seuprojeto</p>
+    </section>
+
+
+    <footer>
+        <p>© 2026 Enerlytics - Todos os direitos reservados</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
