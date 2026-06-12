@@ -2,7 +2,7 @@
 
 Landing page desenvolvida para apresentar um produto/serviço.
 
-## Tecnologias
+# Tecnologias
 - HTML
 - CSS
 - JavaScript
